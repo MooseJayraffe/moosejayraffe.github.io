@@ -87,6 +87,44 @@ html, body {
 	border: 1pt solid #08081580;
 }
 
+/* 'Coming Soon' classes */
+.soa_comingsoon h1 {
+	/* Font */
+	color: #E0E0E0FF;
+	font-size: 25pt;
+	text-align: center;
+	text-shadow: 2pt 2pt #08081580;
+}
+
+.soa_comingsoon p {
+	/* Font */
+	color: #FFFFFFFF;
+	font-size: 12pt;
+	text-align: center;
+	text-shadow: 1pt 1pt #08081580;
+}
+
+.soa_comingsoon a {
+	/* Font */
+	color: #008080FF;
+}
+
+.soa_comingsoon a:hover {
+	/* Font */
+	color: #20A0A0FF;
+}
+
+.soa_comingsoon a:active {
+	/* Font */
+	color: #40C0FFFF;
+}
+
+.content hr {
+	/* Style */
+	width: 100%;
+	border: 1pt solid #08081580;
+}
+
 /* Misc. classes */
 .sitelogo {
 	/* Center in container */
@@ -100,6 +138,17 @@ html, body {
 	
 	/* Dimensions */
 	width: 55%;
+}
+
+.soalogo {
+	/* Center in container */
+	display: block;
+	margin-top: 12pt;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/* Dimensions */
+	width: 90%;
 }
 
 /* General classes */

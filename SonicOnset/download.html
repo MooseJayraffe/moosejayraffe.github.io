@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>Sonic Onset Adventure</title>
+		<link rel="stylesheet" href="../style.css">
+		
+		<meta content="Sonic Onset Adventure" property="og:title">
+		<meta content="Downloads" property="og:description">
+		<meta content="https://cuckydev.github.io/SonicOnset/" property="og:url">
+		<meta content="https://cuckydev.github.io/SonicOnset/soalogo.png" property="og:image">
+		<meta content="#181880" data-react-helmet="true" name="theme-color">
+		
+		<script>
+			//Request latest release
+			const url = "https://api.github.com/repos/cuckydev/SonicOnset/releases/latest";
+			
+			//Open URL
+			const http_request = new XMLHttpRequest();
+			http_request.open("GET", url);
+			http_request.onreadystatechange = function() {
+				if (this.readyState == 4)
+				{
+					if (this.status == 200)
+					{
+						var decode = JSON.parse(this.responseText)
+						console.log(decode.tag_name)
+						document.getElementById("latest_body").innerHTML = decode.body.replace(/(?:\r\n|\r|\n)/g, '<br>');
+					}
+					else
+					{
+						document.getElementById("latest_body").innerHTML = this.status;
+					}
+				}
+			}
+			
+			//Send request
+			http_request.send();
+		</script>
+	</head>
+	<body>
+		<div class="latest_container">
+			<p id="latest_body"></p>
+		</div>
+	</body>
+</html>
