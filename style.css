@@ -104,9 +104,8 @@ html, body {
 /* General classes */
 .footer {
 	/* Colour */
-	background-color: #181848A0;
-	border-left: 1px solid #101030A0;
-	border-right: 1px solid #1010830A0;
+	background-color: #101040A0;
+	border-top: 1px solid #101030A0;
 	
 	/* Padding */
 	padding: 6pt;
