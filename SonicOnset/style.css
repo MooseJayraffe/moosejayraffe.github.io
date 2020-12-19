@@ -18,11 +18,21 @@ html, body {
 }
 
 /* Classes */
-p {
+h1 {
 	/* Font */
 	text-align: center;
 	color: #FFFFFFFF;
 	font-size: 20pt;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2pt 2pt #08081580;
+}
+
+p {
+	/* Font */
+	text-align: center;
+	color: #FFFFFFFF;
+	font-size: 12pt;
 	font-weight: bold;
 	text-align: center;
 	text-shadow: 1pt 1pt #08081580;
@@ -35,6 +45,21 @@ p {
 	
 	/* Dimensions */
 	width: 55%;
+}
+
+a {
+	/* Font */
+	color: #008080FF;
+}
+
+a:hover {
+	/* Font */
+	color: #20A0A0FF;
+}
+
+a:active {
+	/* Font */
+	color: #40C0FFFF;
 }
 
 /* Hacks */
