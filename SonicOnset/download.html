@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sonic Onset Adventure</title>
-		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="/style.css">
 		
 		<meta content="Sonic Onset Adventure" property="og:title">
 		<meta content="Downloads" property="og:description">
@@ -12,7 +12,8 @@
 		
 		<script>
 			//Request latest release
-			const url = "https://api.github.com/repos/cuckydev/SonicOnset/releases/latest";
+			const repo = "cuckydev/SonicOnset"
+			const url = "https://api.github.com/repos/" + repo + "/releases/latest";
 			
 			//Open URL
 			const http_request = new XMLHttpRequest();
@@ -23,11 +24,14 @@
 					if (this.status == 200)
 					{
 						var decode = JSON.parse(this.responseText)
-						console.log(decode.tag_name)
+						document.getElementById("latest_tag").innerHTML = decode.name + " - " + decode.tag_name;
 						document.getElementById("latest_body").innerHTML = decode.body.replace(/(?:\r\n|\r|\n)/g, '<br>');
+						document.getElementById("latest_download").href = "https://github.com/" + repo + "/releases/latest/";
+						document.getElementById("latest_download").innerHTML = "Download here";
 					}
 					else
 					{
+						document.getElementById("latest_tag").innerHTML = "Failed to get latest release";
 						document.getElementById("latest_body").innerHTML = this.status;
 					}
 				}
@@ -38,8 +42,19 @@
 		</script>
 	</head>
 	<body>
-		<div class="latest_container">
-			<p id="latest_body"></p>
+		<div class="content">
+			<a href="/SonicOnset/"><img src="soalogo.png" alt="Sonic Onset Adventure" class="soalogo_mini"></img></a>
+			<h1>Downloads</h1>
+			<div class="latest_container">
+				<h3 id="latest_tag">Requesting latest release...</h3>
+				<p id="latest_body"></p>
+				<hr>
+				<p><a id="latest_download" href="#"></a></p>
+			</div>
+			<hr>
+			<h2>Other Releases</h2>
+			<p>Other releases can be found <a href="https://github.com/cuckydev/SonicOnset/releases/" id="other_download">here</a>.</p>
 		</div>
+		<div class="footer">Website &#169;CuckyDev 2020<br>Sonic Onset Adventure &#169;DigitalSwirl 2020</div>
 	</body>
 </html>

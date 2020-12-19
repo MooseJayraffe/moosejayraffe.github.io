@@ -87,6 +87,17 @@ html, body {
 	border: 1pt solid #08081580;
 }
 
+/* Latest download classes */
+.latest_container {
+	/* Colour */
+	background-color: #181848A0;
+	border: 1px solid #101030A0;
+	
+	/* Positioning */
+	width: 90%;
+	margin: auto;
+}
+
 /* 'Coming Soon' classes */
 .soa_comingsoon h1 {
 	/* Font */
@@ -121,7 +132,9 @@ html, body {
 
 .content hr {
 	/* Style */
-	width: 100%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	border: 1pt solid #08081580;
 }
 
@@ -149,6 +162,17 @@ html, body {
 	
 	/* Dimensions */
 	width: 90%;
+}
+
+.soalogo_mini {
+	/* Center in container */
+	display: block;
+	margin-top: 12pt;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/* Dimensions */
+	width: 30%;
 }
 
 /* General classes */
