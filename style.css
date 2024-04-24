@@ -11,8 +11,7 @@ html, body {
 	min-height: 100%;
 	
 	/* Background */
-	background-color: #FF6C47;
-	background-image: url("/back.png");
+	background-color: #FF7043;
 	background-position: center;
 	
 	/* Font */
@@ -22,7 +21,7 @@ html, body {
 /* Content classes */
 .content {
 	/* Colour */
-	background-color: #FF6C47A0;
+	background-color: #FF7043;
 	border-left: 1px solid #101030A0;
 	border-right: 1px solid #1010830A0;
 	
